@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/valentine.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>Flowers</title>
+</head>
+
+<body>
+    <div class="greetings">
+        <span>K</span>
+        <span>a</span>
+        <span>r</span>
+        <span>i</span>
+        <span>s</span>
+        <span>!</span>
+    </div>
+  
+
+    <!-- Valentine-specific content -->
+    <div id="valentineQuestion"><b>Will you be my valentine?</b></div>
+    <button class="answerButton" onclick="location.href='flower.html'">
+        Yes
+    </button>
+    <button class="answerButton" id="noButton">I no no wanna o(╥﹏╥)o</button>
+    <br />
+    <img src="./img/cat.jfif" alt="cat asking question" class="responsive" />
+
+    <script>
+        document
+            .getElementById("noButton")
+            .addEventListener("click", function () {
+                var yesButton = document.querySelector(
+                    'button[onclick*="flower.html"]'
+                );
+                var currentFontSize = parseInt(
+                    window.getComputedStyle(yesButton).fontSize
+                );
+                yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 10px
+            });
+    </script>
+</body>
+
+</html>
